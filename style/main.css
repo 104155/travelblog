@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker");
+/*
+1.General Rules
+2.Header
+3.Main
+4.Footer
+5.Media Queries
+*/
+/* General Rules */
+/* Header - Section */
+header::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Scratches_top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  opacity: 1;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/spots.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+header {
+  height: 5em;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px #797979;
+          box-shadow: 0px 0px 10px #797979;
+}
+
+header .logoImg {
+  margin: auto 0;
+  height: 3rem;
+}
+
+header h1 {
+  color: black;
+}
+
+header a {
+  position: relative;
+  z-index: 5;
+  color: black;
+}
+
+header a:hover {
+  color: #ff4141;
+}
+
+/* Main - Section */
+main::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/wood-691646_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+main .ctrContainer::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 16.2%;
+  background-image: url("../img/spots.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  opacity: 0.5;
+}
+
+main .ctrContainer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5d5d), to(#ff4141));
+  background-image: linear-gradient(#ff5d5d, #ff4141);
+  -webkit-box-shadow: 0px 0.7px 1px #4b4b4b;
+          box-shadow: 0px 0.7px 1px #4b4b4b;
+}
+
+main .ctrContainer .sortBtn {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+main .ctrContainer .sortBtn:hover {
+  color: #2d6bbd;
+}
+
+main .cardContainer {
+  height: 23em !important;
+  -webkit-box-shadow: 0.5em 0.5em 1em #353535;
+          box-shadow: 0.5em 0.5em 1em #353535;
+}
+
+main .cardContainer .cardDate {
+  position: absolute;
+  top: -0.35em;
+  left: 0;
+  width: 100%;
+  color: #1265c4;
+  text-align: center;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+  text-shadow: -0.5px 0 #1265c4, 0 0.5px #1265c4, 0.5px 0 #1265c4, 0 -0.5px #1265c4;
+}
+
+main .cardContainer .cardImgContainer {
+  margin: 1em 1em 0.5em 1em;
+  height: 55% !important;
+}
+
+main .cardContainer .cardImgContainer .cardImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .cardContainer p {
+  margin-bottom: 0;
+}
+
+main .cardContainer .cardTitle {
+  margin-top: -0.4em;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.4rem;
+}
+
+main .cardContainer .cardSubtitle {
+  margin-top: -0.5em;
+  color: black;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+main .cardContainer .cardHlink {
+  margin-top: -0.2em;
+  text-decoration: underline;
+  color: #1265c4;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+  text-shadow: -0.5px 0 #1265c4, 0 0.5px #1265c4, 0.5px 0 #1265c4, 0 -0.5px #1265c4;
+}
+
+main .cardContainer .cardPrice {
+  margin-top: -0.5em;
+  color: #1265c4;
+  text-align: center;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+  text-shadow: -0.5px 0 #1265c4, 0 0.5px #1265c4, 0.5px 0 #1265c4, 0 -0.5px #1265c4;
+}
+
+main .cardContainer .cardTel {
+  margin-top: -0.5em;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+}
+
+main .cardContainer .cardTxt {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+}
+
+main .cardContainer .stampContainer {
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  width: 3.5em;
+  height: 3.5em;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  opacity: 0.5;
+}
+
+main .cardContainer .stampContainer .stampImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .outerCardContainer:nth-child(odd) {
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+main .outerCardContainer:nth-child(even) {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+main .cardContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0 0 6em #5f5974;
+  box-shadow: inset 0 0 6em #5f5974;
+  opacity: 0.4;
+}
+
+/* Footer - Section */
+footer::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/spots.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Scratches.png");
+  background-size: cover;
+  opacity: 0.75;
+}
+
+footer {
+  position: relative;
+  height: 5.5em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff56b), to(#fae900));
+  background-image: linear-gradient(#fff56b, #fae900);
+  -webkit-box-shadow: 0px 0.8px 1px white inset;
+          box-shadow: 0px 0.8px 1px white inset;
+}
+
+footer .logoContainer {
+  height: 2em;
+}
+
+footer .fsFooter {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Media - Query - Mobile */
+@media screen and (max-width: 767px) {
+  header {
+    height: 10em;
+  }
+  header div {
+    height: 50%;
+  }
+  header nav {
+    height: 50%;
+  }
+  .cardImg {
+    display: none;
+  }
+}
+
+/* Media - Query - Tablet */
+@media screen and (min-width: 768px) {
+  header div {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

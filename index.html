@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR5 MartinObermayer</title>
+    <!-- BS-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- SCSS-link -->
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <header class="d-flex flex-column flex-sm-column flex-md-row justify-content-md-around">
+        <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-start">
+            <img class="img-fluid logoImg" src="img/backpack.png" alt="backpack icon">
+            <h1 class="fs-5 fw-bold my-auto ms-4 companyName">Vagabond</h1>
+        </div>
+        <nav class="nav justify-content-center justify-content-sm-center align-items-center">
+            <a class="ms-3 text-decoration-none" href="#">Home</a>
+            <a class="ms-3 text-decoration-none" href="#">About</a>
+            <a class="ms-3 text-decoration-none" href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="d-flex flex justify-content-center justify-content-sm-center justify-content-md-end mx-5 rounded-bottom ctrContainer">
+            <button class="fs-6 fw-normal sortBtn my-2 me-2 sortDesc">Sort desc</button>
+            <button class="fs-6 fw-normal sortBtn my-2 me-0 me-sm-0 me-md-5 sortAsc">Sort asc</button>
+        </div>
+        <div class="container py-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 g-5 cardsContainer">
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-column justify-content-center">
+        <div class="d-flex justify-content-center logoContainer">
+            <img class="img-fluid h-100" src="img/backpack.png" alt="backpack icon">
+            <p class="fw-bold my-auto ms-2 companyName">Vagabond</p>
+        </div>
+
+        <p class="text-center mb-0 mt-1 owner fsFooter"></p>
+    </footer>
+
+    <!-- BS-bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- TS-script -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

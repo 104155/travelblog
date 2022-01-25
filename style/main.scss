@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker");
+
+/*
+1.General Rules
+2.Header
+3.Main
+4.Footer
+5.Media Queries
+*/
+
+/* General Rules */
+$bgColorHeader: white;
+$bgColorCtr1: rgb(255, 65, 65);
+$bgColorCtr2: rgb(255, 93, 93);
+$bgColorFooter1: rgb(255, 245, 107);
+$bgColorFooter2: rgb(250, 233, 0);
+$colorTxt1: black;
+$colorTxt2: white;
+$colorFrame1: rgb(212, 0, 64);
+$colorFrame2: rgb(0, 180, 150);
+$colorFrame3: rgb(228, 186, 0);
+$colorFrame4: rgb(45, 107, 189);
+$shadowLight: rgb(121, 121, 121);
+$shadowDark: rgb(75, 75, 75);
+$shadowDarker: rgb(53, 53, 53);
+$shadowInward: white;
+$shadowCorona: white;
+$vignette: rgb(95, 89, 116);
+$penBlue: rgb(18, 101, 196);
+
+/* Header - Section */
+
+header::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Scratches_top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/spots.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+header {
+    height: 5em;
+    position: relative;
+    z-index: 2;
+    background-color: $bgColorHeader;
+    box-shadow: 0px 0px 10px $shadowLight;
+
+    .logoImg {
+        margin: auto 0;
+        height: 3rem;
+    }
+
+    h1 {
+        color: $colorTxt1;
+    }
+
+    a {
+        position: relative;
+        z-index: 5;
+        color: $colorTxt1;
+    }
+
+    a:hover {
+        color: $bgColorCtr1;
+    }
+}
+
+/* Main - Section */
+
+main::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/wood-691646_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+main {
+    .ctrContainer::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 16.2%;
+        background-image: url("../img/spots.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        opacity: 0.5;
+    }
+
+    .ctrContainer {
+        background-image: linear-gradient($bgColorCtr2, $bgColorCtr1);
+        box-shadow: 0px 0.7px 1px $shadowDark;
+
+        .sortBtn {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            border: none;
+            color: $colorTxt2;
+        }
+
+        .sortBtn:hover {
+            color: $colorFrame4;
+        }
+    }
+
+    .cardContainer {
+        height: 23em !important;
+        box-shadow: 0.5em 0.5em 1em $shadowDarker;
+
+        .cardDate {
+            position: absolute;
+            top: -0.35em;
+            left: 0;
+            width: 100%;
+            color: $penBlue;
+            text-align: center;
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+            text-shadow: -0.5px 0 $penBlue, 0 0.5px $penBlue, 0.5px 0 $penBlue, 0 -0.5px $penBlue;
+        }
+
+        .cardImgContainer {
+            margin: 1em 1em 0.5em 1em;
+            height: 55% !important;
+
+            .cardImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .cardTitle {
+            margin-top: -0.4em;
+            font-family: "Permanent Marker", cursive;
+            font-size: 1.4rem;
+        }
+
+        .cardSubtitle {
+            margin-top: -0.5em;
+            color: $colorTxt1;
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+            text-shadow: -0.5px 0 $colorTxt1, 0 0.5px $colorTxt1, 0.5px 0 $colorTxt1, 0 -0.5px $colorTxt1;    
+        }
+
+        .cardHlink {
+            margin-top: -0.2em;
+            text-decoration: underline;
+            color: $penBlue;
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+            text-shadow: -0.5px 0 $penBlue, 0 0.5px $penBlue, 0.5px 0 $penBlue, 0 -0.5px $penBlue;    
+        }
+
+        .cardPrice {
+            margin-top: -0.5em;
+            color: $penBlue;
+            text-align: center;
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+            text-shadow: -0.5px 0 $penBlue, 0 0.5px $penBlue, 0.5px 0 $penBlue, 0 -0.5px $penBlue;
+        }
+        
+        .cardTel {
+            margin-top: -0.5em;
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+        }
+
+        .cardTxt {
+            font-family: "Reenie Beanie", cursive;
+            font-size: 1.2rem;
+        }
+
+        .stampContainer {
+            position: absolute;
+            top: 65%;
+            left: 75%;
+            width: 3.5em;
+            height: 3.5em;
+            transform: rotate(30deg);
+            opacity: 0.5;
+
+            .stampImg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .outerCardContainer:nth-child(odd) {
+        transform: rotate(-2deg);
+    }
+
+    .outerCardContainer:nth-child(even) {
+        transform: rotate(5deg);
+    }
+
+    .cardContainer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -moz-box-shadow: inset 0 0 6em $vignette;
+        -webkit-box-shadow: inset 0 0 6em $vignette;
+        box-shadow: inset 0 0 6em $vignette;
+        opacity: 0.4;
+    }
+}
+
+/* Footer - Section */
+
+footer::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/spots.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Scratches.png");
+    background-size: cover;
+    opacity: 0.75;
+}
+
+footer {
+    position: relative;
+    height: 5.5em;
+    background-image: linear-gradient($bgColorFooter1, $bgColorFooter2);
+    box-shadow: 0px 0.8px 1px $shadowInward inset;
+
+    .logoContainer {
+        height: 2em;
+    }
+
+    .fsFooter {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
+
+/* Media - Query - Mobile */
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 10em;
+
+        div {
+            height: 50%;
+        }
+
+        nav {
+            height: 50%;
+        }
+    }
+
+    .cardImg {
+        display: none;
+    }
+}
+
+/* Media - Query - Tablet */
+
+@media screen and (min-width: 768px) {
+    header {
+        div {
+            width: 40%;
+        }
+    }
+}
